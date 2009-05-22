@@ -71,7 +71,7 @@ sub next_dir {
 }
 
 sub next_name {
-    my ($self, $is_dir, $is_file) = validatep(\@_,
+    my ($self, $is_dir, $is_file) = validated_list(\@_,
         dir  => { isa => 'Bool', optional => 1 },
         file => { isa => 'Bool', optional => 1, default => 1 }
     );
